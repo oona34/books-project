@@ -104,6 +104,11 @@ function hideBookForm() {
     dialog.close();
 }
 
+function toggleRead(label) {
+    console.log(`Changing read status of book with id: ${label.id}`);
+    myLibrary.filter(book => book.id === label.id).map((book) => {book.isRead = !book.isRead;});
+}
+
 function deleteBookFromLibrary(label) {
     console.log(`Deleting book with id: ${label.id}`);
     myLibrary = myLibrary.filter(book => book.id !== label.id);
@@ -120,12 +125,23 @@ function createBookcard(book) {
     let cardHeader = document.createElement("div");
     cardHeader.classList.add("buttons-header");
 
+
+    let readStatusLabel = document.createElement("p");
+    readStatusLabel.textContent = "Read:"
+    let readToggle = document.createElement("input");
+    readToggle.setAttribute("type", "checkbox");
+    readToggle.checked = false;
+
+    readToggle.addEventListener("click", (e) => toggleRead(e.currentTarget.parentElement.parentElement.parentElement));
+
     let trashBtn = document.createElement("button");
     let trashIcon = document.createElement("i");
     trashIcon.classList.add("trash-button", "fa", "fa-trash");
     trashBtn.appendChild(trashIcon);
     trashBtn.addEventListener("click", (e) => deleteBookFromLibrary(e.currentTarget.parentElement.parentElement.parentElement));
 
+    cardHeader.appendChild(readStatusLabel);
+    cardHeader.appendChild(readToggle);
     cardHeader.appendChild(trashBtn);
 
     let front = document.createElement("div");

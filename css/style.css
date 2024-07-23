@@ -264,22 +264,23 @@ rgba(0, 0, 0, 0.1);
   transform: rotateY(180deg);
 }
 
-input[type="checkbox"] {
+label>input[type="checkbox"] {
   position: absolute;
   scale: 0;
 }
 
-input[type="checkbox"]:checked ~ .card .back {
+label>input[type="checkbox"]:checked ~ .card .back {
   transform: rotateY(0);
 }
 
-input[type="checkbox"]:checked ~ .card .front {
+label>input[type="checkbox"]:checked ~ .card .front {
   transform: rotateY(-180deg);
 }
 
 .front img {
+  margin-top: 0.75rem;
   height: auto;
-  margin-bottom: .75rem;
+  margin-bottom: 0;
   width: 100%;
   aspect-ratio: 1 / 1;
 }
@@ -290,7 +291,7 @@ input[type="checkbox"]:checked ~ .card .front {
   gap: 5px;
 }
 
-.buttons-header button {
+.buttons-header>* {
   z-index: 10;
   border: none;
   background-color: transparent;
@@ -313,14 +314,13 @@ input[type="checkbox"]:checked ~ .card .front {
 }
 
 .card p {
-  font-style: italic;
   margin: 10px 0;
   color: 
 #666;
 }
 
 .more {
-  line-height: 3rem;
+  line-height: 2rem;
   font-weight: bold;
 }
 
