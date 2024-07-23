@@ -1,0 +1,346 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+.playwrite-dk-uloopet-cursive {
+    font-family: "Playwrite DK Uloopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2rem;
+  }
+
+  .hidden {
+    display: none;
+}
+
+.page-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  height: 10vh;
+  background-color: #dddddd;
+  align-items: center;
+  margin: 0;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+nav ul li {
+  height: 100%;
+  padding-left: 5px;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav ul li:hover {
+  background-color: #111;
+  height: 100%;
+}
+
+main {
+  padding: 20px 30px;
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#addBookButton {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.empty-state {
+  width: 60vw;
+}
+
+.form-dialog {
+  min-width: 25vw;
+  max-width: 50vw;
+  align-self: center;
+  padding: 2rem;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  padding: 0.5rem;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: space-between;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  width: 45%;
+}
+
+.form-group label {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+  width: 40%;
+  font-size: 1rem;
+}
+
+.form-group input[type="file"] {
+  width: auto;
+  padding: 0;
+  border: none;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.form-group .asterix {
+  position: relative;
+  top: -0.5rem;
+  right: 0rem;
+  pointer-events: none;
+  color: 
+#df2666;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  color: #333;
+  margin-right: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-primary:active {
+  background-color: var(--accent-color);
+}
+
+.row{
+  margin-top: 5vw;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.card {
+  background-color: white;
+  min-width: 20vw;
+  min-height: 55vh;
+  max-width: 25vw;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+  flex-basis: 33.333%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 
+rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid 
+#ccc;
+  perspective: 1000px;
+
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 36px 36px 44px 44px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  scale: 0;
+}
+
+input[type="checkbox"]:checked ~ .card .back {
+  transform: rotateY(0);
+}
+
+input[type="checkbox"]:checked ~ .card .front {
+  transform: rotateY(-180deg);
+}
+
+.front img {
+  height: auto;
+  margin-bottom: .75rem;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.buttons-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.buttons-header button {
+  z-index: 10;
+  border: none;
+  background-color: transparent;
+}
+
+.trash-button:hover {
+  color: var(--accent-color);
+}
+
+.card-content {
+  padding: 20px;
+  font-size: 0.8rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: 
+#333;
+}
+
+.card p {
+  font-style: italic;
+  margin: 10px 0;
+  color: 
+#666;
+}
+
+.more {
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+/* .synopsis {
+  font-weight: bold;
+} */
+
+.card a:hover {
+  background-color: 
+#0056b3;
+}
+
+
+@media (max-width: 600px) {
+  .form-dialog {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .card {
+    min-width: 50vw;
+  }
+}

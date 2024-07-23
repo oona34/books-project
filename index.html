@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Project</title>
+
+    <link rel="stylesheet" href="css/style.css" loading="lazy">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet:wght@100..400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="description" content="Practicing intermediate JS skills">
+    <meta name="theme-color" content="#FF00FF">
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <a href="index.html"><img width="48" height="48" src="https://img.icons8.com/color/48/books.png" alt="books"/></a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="" aria-current="page">My Library</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="top">
+        <h1>My Library</h1>
+        <button id="addBookButton" class="btn-primary">Add book</button>
+      </div>
+
+      <dialog class="form-dialog">
+        <div class="form-container">
+          <form>
+            <h2>Add Book</h2>
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <span class="asterix">*</span>
+              <input type="text" id="title" name="title" placeholder="ex: Romeo and Juliet" required>
+            </div>
+            <div class="form-group">
+              <label for="author">Author:</label>
+              <span class="asterix">*</span>
+              <input type="text" id="author" name="author" placeholder="ex: Shakespeare" required>
+            </div>
+            <div class="form-group">
+                <label for="nb-pages">Number <br>of pages:</label>
+                <span class="asterix">*</span>
+                <input type="number" id="nb-pages" name="nbPages" required>
+            </div>
+            <div class="form-group">
+              <label for="publication-year">Year <br>of publication:</label>
+              <span class="asterix">*</span>
+              <input type="number" id="publication-year" name="publicationYear" required>
+            </div>
+            <div class="form-group">
+              <label for="synopsis">Synopsis:</label>
+              <textarea id="synopsis" name="synopsis" maxlength="300"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="cover">Cover Image:</label>
+              <input type="file" id="cover" name="cover" accept="image/png, image/jpeg">
+            </div>
+            <!-- more form fields go here -->
+            <div class="form-actions">
+              <button id="button-cancel" type="button" class="btn btn-secondary">Cancel</button>
+              <button id="button-submit" type="submit" class="btn btn-primary">Save</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+
+      <div class="empty-state">
+        <h4>It looks like you don't have any book in your library at the moment.
+          <br>
+          <br>
+        Press `Add book`to get started.
+        </h2>
+      </div>
+
+      <div class="row">
+
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+</body>
+
+    <footer>
+
+        <script src="js/index.js" type="module"></script>
+    </footer>
+</html>
